@@ -35,7 +35,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #f5fbfd;
-  background-color: skyblue;
+  background-color: #f5fbfd;
   position: relative;
   &:hover ${Info} {
     opacity: 1;

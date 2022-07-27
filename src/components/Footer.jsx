@@ -1,4 +1,5 @@
 import {
+  AccessAlarm,
   Facebook,
   Instagram,
   MailOutline,
@@ -8,9 +9,11 @@ import {
   Twitter,
 } from "@material-ui/icons";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
+  ${mobile({flexDirection:"column"})}
 `;
 
 const Left = styled.div`
@@ -49,6 +52,7 @@ const Center = styled.div`
   flex: 1;
   padding: 20px;
   // border: 1px solid red;
+  ${mobile({display:"none"})}
 `;
 
 const Title = styled.h3`
@@ -73,12 +77,14 @@ const Right = styled.div`
   flex: 1;
   padding: 20px;
   // border: 1px solid green;
+  ${mobile({backgroundColor:"#fff8f8"})}
 `;
 
 const ContactItem = styled.div`
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  // border: 1px solid green;
 `;
 
 const Payment = styled.img`
@@ -109,6 +115,9 @@ const Footer = () => {
           <SocialIcon>
             <Pinterest />
           </SocialIcon>
+          <SocialIcon>
+            <AccessAlarm/>
+          </SocialIcon>
         </SocialContainer>
       </Left>
       <Center>
@@ -130,7 +139,7 @@ const Footer = () => {
         <Title>Contect</Title>
         <ContactItem>
           <Room style={{ marginRight: "10px" }} />
-          Noida sector 3, 3 flore.
+          Noida sector 3, G23, 3 flore.
         </ContactItem>
         <ContactItem>
           <Phone style={{ marginRight: "10px" }} />
